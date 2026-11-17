@@ -2847,7 +2847,9 @@ msgstr "{selectedProviderName} 연결"
 msgid "Connect a chat app"
 msgstr "채팅 앱 연결"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/onboarding/model-step.tsx
+#: apps/web/src/pages/shell/chat-model-picker.tsx
 #: apps/web/src/pages/shell/composer-error.tsx
 msgid "Connect a model"
 msgstr "AI 모델 연결"
@@ -2875,6 +2877,11 @@ msgstr "앱 연결"
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Connect it again"
 msgstr "다시 연결하세요"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Connect it to {app}"
+msgstr ""
 
 #: apps/web/src/pages/shell/message-cards.tsx
 msgid "Connect MCP server “{name}”"
@@ -3199,6 +3206,7 @@ msgstr "비밀번호를 변경할 수 없습니다"
 msgid "Could not change role"
 msgstr "역할을 변경하지 못했습니다"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Could not change the model"
 msgstr "모델을 변경하지 못했습니다"
@@ -3604,6 +3612,7 @@ msgstr "기억을 불러오지 못했습니다"
 #: apps/mobile/app/(settings)/models.tsx
 #: apps/mobile/app/bot-model.tsx
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/model-settings/use-model-settings.ts
 msgid "Could not load model settings"
 msgstr "AI 모델 설정을 불러오지 못했습니다."
@@ -4244,7 +4253,9 @@ msgstr "실험실을 업데이트하지 못했습니다"
 msgid "Couldn't update messaging settings"
 msgstr "메시징 설정을 업데이트할 수 없습니다"
 
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Couldn't update your timezone"
 msgstr "시간대를 업데이트하지 못했습니다"
 
@@ -4497,6 +4508,14 @@ msgstr "기본값"
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
 msgid "Default ({0})"
 msgstr "기본값 ({0})"
+
+#: apps/web/src/pages/shell/composer-model-picker.tsx
+msgid "Default ({defaultLabel})"
+msgstr ""
+
+#: apps/mobile/app/chat-model.tsx
+msgid "Default ({level})"
+msgstr ""
 
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Default from Hermes"
@@ -6152,6 +6171,12 @@ msgstr "답장한 메시지로 이동: {excerpt}"
 msgid "just now"
 msgstr "방금"
 
+#. Keeps the account's current timezone instead of switching
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Keep"
+msgstr ""
+
 #: apps/web/src/pages/shell/composer.tsx
 msgid "Keep inline"
 msgstr "텍스트로 유지"
@@ -6803,6 +6828,7 @@ msgstr "모델 ID"
 msgid "Model options"
 msgstr "모델 선택지"
 
+#: apps/mobile/app/(settings)/general.tsx
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
 msgid "Model picker in chat"
 msgstr "채팅에서 모델 선택"
@@ -6811,9 +6837,14 @@ msgstr "채팅에서 모델 선택"
 msgid "Model provider"
 msgstr "모델 제공업체"
 
+#: apps/mobile/components/composer-model-chip.tsx
 #: apps/web/src/pages/shell/chat-model-picker.tsx
 msgid "Model: {model}"
 msgstr "모델: {model}"
+
+#: apps/web/src/pages/shell/chat-model-picker.tsx
+msgid "Model: {model}, {detail}"
+msgstr ""
 
 #: apps/mobile/app/(settings)/_layout.tsx
 #: apps/mobile/app/(settings)/account.tsx
@@ -6994,6 +7025,11 @@ msgstr "봇 이름 정하기"
 #: apps/web/src/lib/roster-status.ts
 msgid "Needs an answer"
 msgstr "답변 필요"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Needs an email address"
+msgstr ""
 
 #: apps/mobile/app/(settings)/integrations.tsx
 #: apps/mobile/lib/user-error.ts
@@ -8141,6 +8177,11 @@ msgstr "플러그인 제출"
 #: apps/web/src/components/integrations/skills-dialog.tsx
 msgid "Plugins"
 msgstr "플러그인"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Point its source at the new webhook"
+msgstr ""
 
 #: apps/web/src/pages/routine-editor/trigger-cards.tsx
 msgid "Post a chat message when a check finds no changes. The routine won't run."
@@ -9985,7 +10026,9 @@ msgstr "{name} 스페이스 작업"
 msgid "Space created"
 msgstr "스페이스를 만들었습니다"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/lib/chat-model.ts
+#: apps/mobile/lib/composer-model.ts
 #: apps/web/src/pages/shell/bot-panel.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Space default"
@@ -10238,9 +10281,12 @@ msgstr "이미지 지원"
 msgid "Supports thinking"
 msgstr "사고 모드 지원"
 
+#. Switches the account's timezone to this device's
 #: apps/mobile/app/(settings)/billing.tsx
 #: apps/mobile/components/space-bots-model.tsx
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/components/ModelCredits.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Switch"
 msgstr "전환"
 
@@ -10259,6 +10305,12 @@ msgstr "그래도 전환"
 #: apps/mobile/app/(settings)/billing.tsx
 msgid "Switch to {name}?"
 msgstr "{name}(으)로 전환할까요?"
+
+#. Asks whether to move the account's timezone to this device's, e.g. 'Switch to Tokyo time?'
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Switch to {place} time?"
+msgstr ""
 
 #: apps/web/src/components/ModelCredits.tsx
 msgid "Switch to {tierTargetName}?"
@@ -10559,11 +10611,13 @@ msgid "They get {weeks} weeks free."
 msgstr "친구는 {weeks}주 동안 무료로 사용해요."
 
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/components/model-role-settings.tsx
 #: apps/web/src/components/call/CallCard.tsx
 #: apps/web/src/pages/ModelRoleSettings.tsx
 #: apps/web/src/pages/routine-editor/model-settings.tsx
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
+#: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Thinking"
 msgstr "생각 깊이"
 

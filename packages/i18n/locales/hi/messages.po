@@ -2847,7 +2847,9 @@ msgstr "{selectedProviderName} कनेक्ट करें"
 msgid "Connect a chat app"
 msgstr "चैट ऐप कनेक्ट करें"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/onboarding/model-step.tsx
+#: apps/web/src/pages/shell/chat-model-picker.tsx
 #: apps/web/src/pages/shell/composer-error.tsx
 msgid "Connect a model"
 msgstr "एक मॉडल कनेक्ट करें"
@@ -2875,6 +2877,11 @@ msgstr "ऐप कनेक्ट करें"
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Connect it again"
 msgstr "इसे फिर से कनेक्ट करें"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Connect it to {app}"
+msgstr ""
 
 #: apps/web/src/pages/shell/message-cards.tsx
 msgid "Connect MCP server “{name}”"
@@ -3199,6 +3206,7 @@ msgstr "पासवर्ड बदला नहीं जा सका"
 msgid "Could not change role"
 msgstr "भूमिका नहीं बदली जा सकी"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Could not change the model"
 msgstr "मॉडल नहीं बदला जा सका"
@@ -3604,6 +3612,7 @@ msgstr "मेमोरी लोड नहीं हो सकी"
 #: apps/mobile/app/(settings)/models.tsx
 #: apps/mobile/app/bot-model.tsx
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/model-settings/use-model-settings.ts
 msgid "Could not load model settings"
 msgstr "मॉडल सेटिंग्स लोड नहीं हो सकीं"
@@ -4244,7 +4253,9 @@ msgstr "Labs अपडेट नहीं हो सका"
 msgid "Couldn't update messaging settings"
 msgstr "मैसेजिंग सेटिंग्स अपडेट नहीं हो सकीं"
 
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Couldn't update your timezone"
 msgstr "आपका टाइमज़ोन अपडेट नहीं हो सका"
 
@@ -4497,6 +4508,14 @@ msgstr "डिफ़ॉल्ट"
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
 msgid "Default ({0})"
 msgstr "डिफ़ॉल्ट ({0})"
+
+#: apps/web/src/pages/shell/composer-model-picker.tsx
+msgid "Default ({defaultLabel})"
+msgstr ""
+
+#: apps/mobile/app/chat-model.tsx
+msgid "Default ({level})"
+msgstr ""
 
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Default from Hermes"
@@ -6152,6 +6171,12 @@ msgstr "उत्तर दिए गए संदेश पर जाएँ: {e
 msgid "just now"
 msgstr "अभी-अभी"
 
+#. Keeps the account's current timezone instead of switching
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Keep"
+msgstr ""
+
 #: apps/web/src/pages/shell/composer.tsx
 msgid "Keep inline"
 msgstr "इनलाइन रखें"
@@ -6803,6 +6828,7 @@ msgstr "मॉडल आईडी"
 msgid "Model options"
 msgstr "मॉडल विकल्प"
 
+#: apps/mobile/app/(settings)/general.tsx
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
 msgid "Model picker in chat"
 msgstr "चैट में मॉडल चुनने का विकल्प"
@@ -6811,9 +6837,14 @@ msgstr "चैट में मॉडल चुनने का विकल्�
 msgid "Model provider"
 msgstr "मॉडल प्रोवाइडर"
 
+#: apps/mobile/components/composer-model-chip.tsx
 #: apps/web/src/pages/shell/chat-model-picker.tsx
 msgid "Model: {model}"
 msgstr "मॉडल: {model}"
+
+#: apps/web/src/pages/shell/chat-model-picker.tsx
+msgid "Model: {model}, {detail}"
+msgstr ""
 
 #: apps/mobile/app/(settings)/_layout.tsx
 #: apps/mobile/app/(settings)/account.tsx
@@ -6994,6 +7025,11 @@ msgstr "अपने बॉट को नाम दें"
 #: apps/web/src/lib/roster-status.ts
 msgid "Needs an answer"
 msgstr "जवाब चाहिए"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Needs an email address"
+msgstr ""
 
 #: apps/mobile/app/(settings)/integrations.tsx
 #: apps/mobile/lib/user-error.ts
@@ -8141,6 +8177,11 @@ msgstr "प्लगइन सबमिशन"
 #: apps/web/src/components/integrations/skills-dialog.tsx
 msgid "Plugins"
 msgstr "प्लगइन"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Point its source at the new webhook"
+msgstr ""
 
 #: apps/web/src/pages/routine-editor/trigger-cards.tsx
 msgid "Post a chat message when a check finds no changes. The routine won't run."
@@ -9985,7 +10026,9 @@ msgstr "{name} के लिए स्पेस क्रियाएँ"
 msgid "Space created"
 msgstr "स्पेस बन गया"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/lib/chat-model.ts
+#: apps/mobile/lib/composer-model.ts
 #: apps/web/src/pages/shell/bot-panel.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Space default"
@@ -10238,9 +10281,12 @@ msgstr "छवियों का समर्थन"
 msgid "Supports thinking"
 msgstr "सोचने की क्षमता का समर्थन करता है"
 
+#. Switches the account's timezone to this device's
 #: apps/mobile/app/(settings)/billing.tsx
 #: apps/mobile/components/space-bots-model.tsx
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/components/ModelCredits.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Switch"
 msgstr "बदलें"
 
@@ -10259,6 +10305,12 @@ msgstr "फिर भी स्विच करें"
 #: apps/mobile/app/(settings)/billing.tsx
 msgid "Switch to {name}?"
 msgstr "{name} पर स्विच करें?"
+
+#. Asks whether to move the account's timezone to this device's, e.g. 'Switch to Tokyo time?'
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Switch to {place} time?"
+msgstr ""
 
 #: apps/web/src/components/ModelCredits.tsx
 msgid "Switch to {tierTargetName}?"
@@ -10559,11 +10611,13 @@ msgid "They get {weeks} weeks free."
 msgstr "उन्हें {weeks} हफ़्ते मुफ़्त मिलते हैं।"
 
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/components/model-role-settings.tsx
 #: apps/web/src/components/call/CallCard.tsx
 #: apps/web/src/pages/ModelRoleSettings.tsx
 #: apps/web/src/pages/routine-editor/model-settings.tsx
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
+#: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Thinking"
 msgstr "सोच रहा है"
 

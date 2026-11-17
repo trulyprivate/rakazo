@@ -2847,7 +2847,9 @@ msgstr "{selectedProviderName} bağla"
 msgid "Connect a chat app"
 msgstr "Sohbet uygulaması bağla"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/onboarding/model-step.tsx
+#: apps/web/src/pages/shell/chat-model-picker.tsx
 #: apps/web/src/pages/shell/composer-error.tsx
 msgid "Connect a model"
 msgstr "Model bağla"
@@ -2875,6 +2877,11 @@ msgstr "Uygulamaları bağla"
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Connect it again"
 msgstr "Yeniden bağla"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Connect it to {app}"
+msgstr ""
 
 #: apps/web/src/pages/shell/message-cards.tsx
 msgid "Connect MCP server “{name}”"
@@ -3199,6 +3206,7 @@ msgstr "Parola değiştirilemedi"
 msgid "Could not change role"
 msgstr "Rol değiştirilemedi"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Could not change the model"
 msgstr "Model değiştirilemedi"
@@ -3604,6 +3612,7 @@ msgstr "Hafıza yüklenemedi"
 #: apps/mobile/app/(settings)/models.tsx
 #: apps/mobile/app/bot-model.tsx
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/model-settings/use-model-settings.ts
 msgid "Could not load model settings"
 msgstr "Model ayarları yüklenemedi"
@@ -4244,7 +4253,9 @@ msgstr "Labs güncellenemedi"
 msgid "Couldn't update messaging settings"
 msgstr "Mesajlaşma ayarları güncellenemedi"
 
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Couldn't update your timezone"
 msgstr "Saat dilimin güncellenemedi"
 
@@ -4497,6 +4508,14 @@ msgstr "Varsayılan"
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
 msgid "Default ({0})"
 msgstr "Varsayılan ({0})"
+
+#: apps/web/src/pages/shell/composer-model-picker.tsx
+msgid "Default ({defaultLabel})"
+msgstr ""
+
+#: apps/mobile/app/chat-model.tsx
+msgid "Default ({level})"
+msgstr ""
 
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Default from Hermes"
@@ -6152,6 +6171,12 @@ msgstr "Yanıtlanan mesaja git: {excerpt}"
 msgid "just now"
 msgstr "az önce"
 
+#. Keeps the account's current timezone instead of switching
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Keep"
+msgstr ""
+
 #: apps/web/src/pages/shell/composer.tsx
 msgid "Keep inline"
 msgstr "Metin olarak bırak"
@@ -6803,6 +6828,7 @@ msgstr "Model kimliği"
 msgid "Model options"
 msgstr "Model seçenekleri"
 
+#: apps/mobile/app/(settings)/general.tsx
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
 msgid "Model picker in chat"
 msgstr "Sohbette model seçici"
@@ -6811,9 +6837,14 @@ msgstr "Sohbette model seçici"
 msgid "Model provider"
 msgstr "Model sağlayıcısı"
 
+#: apps/mobile/components/composer-model-chip.tsx
 #: apps/web/src/pages/shell/chat-model-picker.tsx
 msgid "Model: {model}"
 msgstr "Model: {model}"
+
+#: apps/web/src/pages/shell/chat-model-picker.tsx
+msgid "Model: {model}, {detail}"
+msgstr ""
 
 #: apps/mobile/app/(settings)/_layout.tsx
 #: apps/mobile/app/(settings)/account.tsx
@@ -6994,6 +7025,11 @@ msgstr "Botuna isim ver"
 #: apps/web/src/lib/roster-status.ts
 msgid "Needs an answer"
 msgstr "Yanıt bekliyor"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Needs an email address"
+msgstr ""
 
 #: apps/mobile/app/(settings)/integrations.tsx
 #: apps/mobile/lib/user-error.ts
@@ -8141,6 +8177,11 @@ msgstr "Eklenti gönderimleri"
 #: apps/web/src/components/integrations/skills-dialog.tsx
 msgid "Plugins"
 msgstr "Eklentiler"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Point its source at the new webhook"
+msgstr ""
 
 #: apps/web/src/pages/routine-editor/trigger-cards.tsx
 msgid "Post a chat message when a check finds no changes. The routine won't run."
@@ -9985,7 +10026,9 @@ msgstr "{name} alanı işlemleri"
 msgid "Space created"
 msgstr "Alan oluşturuldu"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/lib/chat-model.ts
+#: apps/mobile/lib/composer-model.ts
 #: apps/web/src/pages/shell/bot-panel.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Space default"
@@ -10238,9 +10281,12 @@ msgstr "Görüntüleri destekler"
 msgid "Supports thinking"
 msgstr "Düşünmeyi destekler"
 
+#. Switches the account's timezone to this device's
 #: apps/mobile/app/(settings)/billing.tsx
 #: apps/mobile/components/space-bots-model.tsx
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/components/ModelCredits.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Switch"
 msgstr "Geç"
 
@@ -10259,6 +10305,12 @@ msgstr "Yine de geç"
 #: apps/mobile/app/(settings)/billing.tsx
 msgid "Switch to {name}?"
 msgstr "{name} planına geçilsin mi?"
+
+#. Asks whether to move the account's timezone to this device's, e.g. 'Switch to Tokyo time?'
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Switch to {place} time?"
+msgstr ""
 
 #: apps/web/src/components/ModelCredits.tsx
 msgid "Switch to {tierTargetName}?"
@@ -10559,11 +10611,13 @@ msgid "They get {weeks} weeks free."
 msgstr "Arkadaşın {weeks} hafta ücretsiz kullanır."
 
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/components/model-role-settings.tsx
 #: apps/web/src/components/call/CallCard.tsx
 #: apps/web/src/pages/ModelRoleSettings.tsx
 #: apps/web/src/pages/routine-editor/model-settings.tsx
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
+#: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Thinking"
 msgstr "Düşünüyor"
 

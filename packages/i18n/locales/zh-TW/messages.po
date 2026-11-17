@@ -2848,7 +2848,9 @@ msgstr "連線 {selectedProviderName}"
 msgid "Connect a chat app"
 msgstr "連結聊天應用程式"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/onboarding/model-step.tsx
+#: apps/web/src/pages/shell/chat-model-picker.tsx
 #: apps/web/src/pages/shell/composer-error.tsx
 msgid "Connect a model"
 msgstr "連線模型"
@@ -2876,6 +2878,11 @@ msgstr "連接應用程式"
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Connect it again"
 msgstr "重新連結"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Connect it to {app}"
+msgstr ""
 
 #: apps/web/src/pages/shell/message-cards.tsx
 msgid "Connect MCP server “{name}”"
@@ -3200,6 +3207,7 @@ msgstr "無法修改密碼"
 msgid "Could not change role"
 msgstr "無法變更角色"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Could not change the model"
 msgstr "無法變更模型"
@@ -3605,6 +3613,7 @@ msgstr "無法載入記憶"
 #: apps/mobile/app/(settings)/models.tsx
 #: apps/mobile/app/bot-model.tsx
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/web/src/pages/model-settings/use-model-settings.ts
 msgid "Could not load model settings"
 msgstr "無法載入模型設定"
@@ -4245,7 +4254,9 @@ msgstr "無法更新實驗室"
 msgid "Couldn't update messaging settings"
 msgstr "無法更新訊息設定"
 
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Couldn't update your timezone"
 msgstr "無法更新你的時區"
 
@@ -4498,6 +4509,14 @@ msgstr "預設"
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
 msgid "Default ({0})"
 msgstr "預設（{0}）"
+
+#: apps/web/src/pages/shell/composer-model-picker.tsx
+msgid "Default ({defaultLabel})"
+msgstr ""
+
+#: apps/mobile/app/chat-model.tsx
+msgid "Default ({level})"
+msgstr ""
 
 #: apps/web/src/pages/shell/agent-import-plan.tsx
 msgid "Default from Hermes"
@@ -6153,6 +6172,12 @@ msgstr "跳轉到回覆的訊息：{excerpt}"
 msgid "just now"
 msgstr "剛剛"
 
+#. Keeps the account's current timezone instead of switching
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Keep"
+msgstr ""
+
 #: apps/web/src/pages/shell/composer.tsx
 msgid "Keep inline"
 msgstr "保留在內文中"
@@ -6804,6 +6829,7 @@ msgstr "模型 ID"
 msgid "Model options"
 msgstr "模型選項"
 
+#: apps/mobile/app/(settings)/general.tsx
 #: apps/web/src/pages/AccountSettingsOverlay.tsx
 msgid "Model picker in chat"
 msgstr "在聊天中顯示模型選擇器"
@@ -6812,9 +6838,14 @@ msgstr "在聊天中顯示模型選擇器"
 msgid "Model provider"
 msgstr "模型供應商"
 
+#: apps/mobile/components/composer-model-chip.tsx
 #: apps/web/src/pages/shell/chat-model-picker.tsx
 msgid "Model: {model}"
 msgstr "模型：{model}"
+
+#: apps/web/src/pages/shell/chat-model-picker.tsx
+msgid "Model: {model}, {detail}"
+msgstr ""
 
 #: apps/mobile/app/(settings)/_layout.tsx
 #: apps/mobile/app/(settings)/account.tsx
@@ -6995,6 +7026,11 @@ msgstr "為你的機器人命名"
 #: apps/web/src/lib/roster-status.ts
 msgid "Needs an answer"
 msgstr "需要回覆"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Needs an email address"
+msgstr ""
 
 #: apps/mobile/app/(settings)/integrations.tsx
 #: apps/mobile/lib/user-error.ts
@@ -8142,6 +8178,11 @@ msgstr "外掛提交"
 #: apps/web/src/components/integrations/skills-dialog.tsx
 msgid "Plugins"
 msgstr "外掛"
+
+#: apps/mobile/lib/import-setup.ts
+#: apps/web/src/pages/shell/import-status.ts
+msgid "Point its source at the new webhook"
+msgstr ""
 
 #: apps/web/src/pages/routine-editor/trigger-cards.tsx
 msgid "Post a chat message when a check finds no changes. The routine won't run."
@@ -9986,7 +10027,9 @@ msgstr "{name} 的空間操作"
 msgid "Space created"
 msgstr "空間已建立"
 
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/lib/chat-model.ts
+#: apps/mobile/lib/composer-model.ts
 #: apps/web/src/pages/shell/bot-panel.tsx
 #: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Space default"
@@ -10239,9 +10282,12 @@ msgstr "支援圖片"
 msgid "Supports thinking"
 msgstr "支援思考"
 
+#. Switches the account's timezone to this device's
 #: apps/mobile/app/(settings)/billing.tsx
 #: apps/mobile/components/space-bots-model.tsx
+#: apps/mobile/lib/device-timezone.ts
 #: apps/web/src/components/ModelCredits.tsx
+#: apps/web/src/pages/TimezonePrompt.tsx
 msgid "Switch"
 msgstr "切換"
 
@@ -10260,6 +10306,12 @@ msgstr "仍要切換"
 #: apps/mobile/app/(settings)/billing.tsx
 msgid "Switch to {name}?"
 msgstr "切換到 {name}？"
+
+#. Asks whether to move the account's timezone to this device's, e.g. 'Switch to Tokyo time?'
+#: apps/mobile/lib/device-timezone.ts
+#: apps/web/src/pages/TimezonePrompt.tsx
+msgid "Switch to {place} time?"
+msgstr ""
 
 #: apps/web/src/components/ModelCredits.tsx
 msgid "Switch to {tierTargetName}?"
@@ -10560,11 +10612,13 @@ msgid "They get {weeks} weeks free."
 msgstr "對方可免費使用 {weeks} 週。"
 
 #: apps/mobile/app/bot-settings.tsx
+#: apps/mobile/app/chat-model.tsx
 #: apps/mobile/components/model-role-settings.tsx
 #: apps/web/src/components/call/CallCard.tsx
 #: apps/web/src/pages/ModelRoleSettings.tsx
 #: apps/web/src/pages/routine-editor/model-settings.tsx
 #: apps/web/src/pages/shell/bot-settings-sections.tsx
+#: apps/web/src/pages/shell/composer-model-picker.tsx
 msgid "Thinking"
 msgstr "思考"
 
